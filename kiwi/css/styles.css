@@ -43,8 +43,8 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-      --background-color: #1F3A03;    
-      --header-footer-color: #c6ffd2; 
+      --background-color: #61003a;    
+      --header-footer-color: #ffeefa; 
       --text-color: #FFFFFF;          
       --button-text-color: #0D000D;            
   }
@@ -58,10 +58,14 @@ body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
-    margin: 0 auto;
-    padding: 0 5px;
+    margin: 0;
+    padding: 0;
     margin-top: 7rem;
     letter-spacing: 0.12em;
+}
+
+main {
+  padding: 0 1rem;
 }
 
 .hero {
@@ -70,7 +74,7 @@ body {
   margin-bottom: 5rem;
 }
 
-button{
+button {
     font-family: 'Atkinson Hyperlegible', Helvetica, sans-serif;
     text-decoration: none;
     background-color: var(--text-color); 
@@ -87,6 +91,7 @@ input {
 
 a {
     cursor: pointer;
+    color: var(--text-color);
 }
 
 .rounded-img {
@@ -101,7 +106,7 @@ a {
   position: absolute;
   top: -40px;
   left: 1rem;
-  background-color: var(--text-color);
+  background-color: var(--header-footer-color);
   color: var(--button-text-color);
   padding: 0.5rem 1rem;
   z-index: 1000;
@@ -154,6 +159,13 @@ nav a:hover::after {
   height: 45px;
 }
 
+/* making the logo swap colors when in dark mode */
+@media (prefers-color-scheme: dark) {
+  .invert-on-dark {
+    filter: invert(1);
+  }
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -189,8 +201,6 @@ nav a:hover::after {
 }
 
 /* font styling */
-/* font styling — fluid & accessible */
-
 h1 {
   font-size: clamp(1.75rem, 1rem + 3vw, 3rem);
   font-weight: 600;
@@ -274,21 +284,19 @@ button:hover {
 }
 
 /* responsive locations grid */
-/* responsive locations grid */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   #locations-list {
     grid-template-columns: 1fr;
     gap: 2rem;
     max-width: 600px;
     margin: 0 auto;
-    justify-items: stretch; /* cards same width */
+    justify-items: stretch; 
   }
 
   .location-card {
     align-items: flex-start;
   }
 }
-
 
 
 /* responsive nav */ 
