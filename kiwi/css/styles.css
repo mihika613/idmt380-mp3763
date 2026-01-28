@@ -327,6 +327,6 @@ button:hover {
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
-  outline: 3px solid var(--button-text-color);
+  outline: 3px solid var(--text-color);
   outline-offset: 3px;
 }
