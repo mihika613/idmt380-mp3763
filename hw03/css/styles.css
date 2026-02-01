@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+}
+
+/* font implemenetation */
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/PlusJakartaSans-VariableFont_wght.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/PlusJakartaSans-VariableFont_wght.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../fonts/PlusJakartaSans-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/* colors & variables */
+:root {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --color-brand-blue: #072F6D;
+    --color-brand-yellow: #f6c400;
+  
+    --font-base-size: 1rem; /* 16px */
+    --line-height-base: 1.5;
+
+    --radius-small: 0.5rem;
+    --radius-medium: 1rem;
+}
+  
+body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: var(--font-base-size);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
+/* skip link */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    background-color: var(--color-brand-blue);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    z-index: 100;
+}
+  
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* header & nav */
+.site-header {
+    padding: 1.5rem 2rem;
+}
+  
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.nav-right {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+  
+.nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-brand-blue);
+}
+  
+.nav a:focus-visible {
+    outline: 3px solid var(--color-brand-yellow);
+    outline-offset: 0.25rem;
+}
+
+.logo {
+    max-height: 4rem;  
+    width: auto;
+}
+
+/* hero section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 0rem 4rem;
+}
+  
+.hero-content {
+    max-width: 40rem;
+}
+  
+.hero h1 {
+    font-size: 2.75rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+  
+.hero-tagline {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+  
+.hero-description {
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+  
+.btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-small);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+  
+.btn-primary {
+    background-color: var(--color-brand-yellow);
+    color: var(--color-text)
+}
+  
+.btn-secondary {
+    border: 2px solid var(--color-text);
+    color: var(--color-text)
+}
+
+.hero aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.hero aside img {
+    border-radius: var(--radius-md);
+    max-width: 100%;
+}
+
+/* site footer */ 
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+  
+.footer-brand {
+    font-weight: 700;
+    color: var(--color-brand-blue);
+}
+  
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+  
+.social-links a:focus-visible {
+    outline: 3px solid var(--color-brand-yellow);
+    outline-offset: 0.25rem;
+}
+
+/* responsive */
+@media (max-width: 60rem) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero aside {
+        margin-top: 2rem;
+    }
+}
