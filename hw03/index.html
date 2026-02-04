@@ -14,75 +14,90 @@
 
     <!--header-->
     <header class="site-header" role="banner">
-        <nav class="nav" aria-label="Primary navigation">
-          <div class="nav-left">
-            <img
-              src="images/drexelchi_logo.png"
-              alt="Drexel CHI User Experience Club logo"
-              class="logo"
-            />
-          </div>
-    
-          <ul class="nav-right">
-            <li><a href="about_us.html">About Us</a></li>
-            <li><a href="#contact.html">Contact</a></li>
-          </ul>
-        </nav>
+      <nav class="nav" aria-label="Primary navigation">
+        <figure class="nav-left">
+          <a href="index.html" aria-label="Drexel CHI User Experience Club home">
+            <img src="images/drexelchi_logo.png" alt="" class="logo" aria-hidden="true" />
+          </a>
+        </figure>
+      
+        <!-- semantic hamburger button -->
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          aria-label="Open menu">
+        </button>
+      
+        <ul id="primary-menu" class="nav-right">
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!--main-->
-    <main id="main-content" role="main">
-        <section class="hero" aria-labelledby="hero-heading">
-            <div class="hero-content">
-                <h1 id="hero-heading">
+    <main id="main-content" role="main" tabindex="0">
+        <section class="hero" aria-label="hero section">
+            <article class="hero-content" tabindex="0">
+                <h1 id="hero-heading" tabindex="0">
                     The Drexel CHI<br />
                     User Experience Club
                 </h1>
     
-                <p class="hero-tagline">Where Design Meets Community.</p>
+                <h2 class="hero-tagline" tabindex="0">Where Design Meets Community.</h2>
     
-                <p class="hero-description">
+                <p class="hero-description" tabindex="0">
                 Drexel CHI (Computer Human Interaction) is a student-led community for
                 those curious about user experience, human-computer interaction, and
                 design. Through hands-on workshops, collaboration, and conversation,
                 we help turn creative passion into real-world UX skills and careers.
                 </p>
     
-                <div class="hero-actions" role="group" aria-label="Primary actions">
-                    <a href="#about" class="btn btn-primary">Meet the Club</a>
-                    <a href="#get-involved" class="btn btn-secondary">Get Involved</a>
-                </div>
-            </div>
+                <nav role="navigation" aria-label="Primary actions" class="hero-actions" tabindex="0">
+                    <a href="about_us.html" class="btn btn-primary" tabindex="0">Meet the Club</a>
+                    <a href="contact.html" class="btn btn-secondary" tabindex="0">Get Involved</a>
+                </nav>
+              </article>
 
     
-            <aside aria-label="Photos from Drexel CHI events">
-                <img src="images/hero_image.png" alt="Graphic design gallery of images from Drexel CHI UX Club events" />
+            <aside aria-label="Photos from Drexel CHI events" tabindex="0">
+              <figure>
+                <img src="images/hero_image.png" alt="Graphic design gallery of images from Drexel CHI UX Club events" class="logo-light" aria-hidden="true"/>
+                <img src="images/hero_image_dark_mode.png" alt="Graphic design gallery of images from Drexel CHI UX Club events" class="logo-dark" aria-hidden="true"/>
+                <figcaption class="visually-hidden">Event images from Drexel CHI UX Club</figcaption>
+              </figure>
             </aside>
         </section>
     </main>
 
     <!--footer-->
-    <footer class="site-footer" role="contentinfo">
-        <p class="footer-brand">DREXEL CHI</p>
+    <footer class="site-footer" role="contentinfo" tabindex="0">
+        <p class="footer-brand" tabindex="0">Drexel CHI</p>
     
         <ul class="social-links" aria-label="Social media links">
           <li>
-            <a href="#" aria-label="Drexel CHI on Instagram">
-              <img src="images/instagram_logo.svg" alt="Drexel CHI's Instagram" aria-hidden="true" />
+            <a href="https://www.instagram.com/drexelchi/?hl=en" target="blank" aria-label="Drexel CHI on Instagram" tabindex="0">
+              <img src="images/instagram_logo.svg" alt="Drexel CHI's Instagram" class="logo-light" aria-hidden="true">
+              <img src="images/instagram_logo_dark_mode.svg" alt="" class="logo-dark" aria-hidden="true">
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Drexel CHI on Discord">
-              <img src="images/discord_logo.svg" alt="Drexel CHI's Discord" aria-hidden="true" />
+            <a href="https://discord.gg/mMhGfAK4Mz" aria-label="Drexel CHI on Discord" target="blank" tabindex="0">
+              <img src="images/discord_logo.svg" alt="Drexel CHI's Discord" class="logo-light" aria-hidden="true">
+              <img src="images/discord_logo_dark_mode.svg" alt="" class="logo-dark" aria-hidden="true">
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Drexel CHI on LinkedIn">
-              <img src="images/linkedin_logo.svg" alt="Drexel CHI's LinkedIn" aria-hidden="true" />
+            <a href="https://www.linkedin.com/company/duov/posts/?feedView=all" aria-label="Drexel CHI on LinkedIn" target="blank" tabindex="0">
+              <img src="images/linkedin_logo.svg" alt="Drexel CHI's LinkedIn" class="logo-light" aria-hidden="true" />
+              <img src="images/linkedin_logo_dark_mode.svg" alt="" class="logo-dark" aria-hidden="true">
             </a>
           </li>
         </ul>
-      </footer>
+    </footer>
+
+    <script src="main.js"></script>
 
 </body>
 </html>
