@@ -129,7 +129,7 @@ p {
 }
 
 /* skip link & hidden elements */
-.skip-link {
+.header-skip-link {
     position: absolute;
     top: -100%;
     left: 1rem;
@@ -138,9 +138,31 @@ p {
     padding: 0.5rem 1rem;
     z-index: 100;
 }
+
+.footer-skip-link {
+    position: absolute;
+    left: 1rem;
+    bottom: 100%;          
+    transform: translateY(-0.5rem);
+
+    background-color: var(--color-links);
+    color: var(--color-bg);
+    padding: 0.5rem 1rem;
+    z-index: 100;
+
+    opacity: 0;            
+    pointer-events: none;  
+    transition: opacity 0.2s ease;
+}
   
-.skip-link:focus {
+.header-skip-link:focus {
     top: 1rem;
+}
+
+.footer-skip-link:focus,
+.footer-skip-link:focus-visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .visually-hidden {
@@ -182,7 +204,7 @@ p {
     color: var(--color-links);
 }
 
-.logo {
+.drexelchi_logo {
     max-height: 4rem;  
     width: auto;
 }
@@ -289,6 +311,7 @@ p {
 
 /* site footer */ 
 .site-footer {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;

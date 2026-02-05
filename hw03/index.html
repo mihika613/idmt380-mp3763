@@ -6,22 +6,22 @@
     <title>Drexel CHI User Experience Club</title>
 
     <!--linking css stylesheet-->
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-    <!--skip link-->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!--skip links-->
+    <a href="#main-content" class="header-skip-link">Skip to main content</a>
 
     <!--header-->
     <header class="site-header" role="banner">
       <nav class="nav" aria-label="Primary navigation">
-        <figure class="nav-left">
+        <figure class="nav-left" aria-label="Drexel CHI User Experience Logo">
           <a href="index.html" aria-label="Drexel CHI User Experience Club home">
-            <img src="images/drexelchi_logo.png" alt="" class="logo" aria-hidden="true" />
+            <img src="images/drexelchi_logo.png" alt="Drexel CHI User Experience Logo" class="drexelchi_logo" aria-hidden="true" />
           </a>
         </figure>
       
-        <!-- semantic hamburger button -->
+        <!--semantic hamburger button-->
         <button
           class="nav-toggle"
           aria-expanded="false"
@@ -29,9 +29,9 @@
           aria-label="Open menu">
         </button>
       
-        <ul id="primary-menu" class="nav-right">
-          <li><a href="about_us.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <ul id="primary-menu" class="nav-right" aria-label="Main Navigation">
+          <li aria-label="About Us"><a href="#">About Us</a></li>
+          <li aria-label="Contact"><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -39,7 +39,7 @@
     <!--main-->
     <main id="main-content" role="main" tabindex="0">
         <section class="hero" aria-label="hero section">
-            <article class="hero-content" tabindex="0">
+            <article aria-label="hero content" class="hero-content" tabindex="0">
                 <h1 id="hero-heading" tabindex="0">
                     The Drexel CHI<br />
                     User Experience Club
@@ -55,17 +55,17 @@
                 </p>
     
                 <nav role="navigation" aria-label="Primary actions" class="hero-actions" tabindex="0">
-                    <a href="about_us.html" class="btn btn-primary" tabindex="0">Meet the Club</a>
-                    <a href="contact.html" class="btn btn-secondary" tabindex="0">Get Involved</a>
+                    <a href="#" class="btn btn-primary" tabindex="0">Meet the Club</a>
+                    <a href="#" class="btn btn-secondary" tabindex="0">Get Involved</a>
                 </nav>
               </article>
 
     
             <aside aria-label="Photos from Drexel CHI events" tabindex="0">
-              <figure>
+              <figure aria-label="Photos from Drexel CHI events">
                 <img src="images/hero_image.png" alt="Graphic design gallery of images from Drexel CHI UX Club events" class="logo-light" aria-hidden="true"/>
                 <img src="images/hero_image_dark_mode.png" alt="Graphic design gallery of images from Drexel CHI UX Club events" class="logo-dark" aria-hidden="true"/>
-                <figcaption class="visually-hidden">Event images from Drexel CHI UX Club</figcaption>
+                <figcaption aria-label="Event images from Drexel CHI UX Club" class="visually-hidden">Event images from Drexel CHI UX Club</figcaption>
               </figure>
             </aside>
         </section>
@@ -74,27 +74,32 @@
     <!--footer-->
     <footer class="site-footer" role="contentinfo" tabindex="0">
         <p class="footer-brand" tabindex="0">Drexel CHI</p>
+
+        <a href="#footer-end" class="footer-skip-link">Skip past footer icons</a>
     
         <ul class="social-links" aria-label="Social media links">
-          <li>
+          <li aria-label="Link to Drexel CHI's Instagram">
             <a href="https://www.instagram.com/drexelchi/?hl=en" target="blank" aria-label="Drexel CHI on Instagram" tabindex="0">
               <img src="images/instagram_logo.svg" alt="Drexel CHI's Instagram" class="logo-light" aria-hidden="true">
-              <img src="images/instagram_logo_dark_mode.svg" alt="" class="logo-dark" aria-hidden="true">
+              <img src="images/instagram_logo_dark_mode.svg" alt="Drexel CHI's Instagram" class="logo-dark" aria-hidden="true">
             </a>
           </li>
-          <li>
+          <li aria-label="Link to Drexel CHI's Discord">
             <a href="https://discord.gg/mMhGfAK4Mz" aria-label="Drexel CHI on Discord" target="blank" tabindex="0">
               <img src="images/discord_logo.svg" alt="Drexel CHI's Discord" class="logo-light" aria-hidden="true">
-              <img src="images/discord_logo_dark_mode.svg" alt="" class="logo-dark" aria-hidden="true">
+              <img src="images/discord_logo_dark_mode.svg" alt="Drexel CHI's Discord" class="logo-dark" aria-hidden="true">
             </a>
           </li>
-          <li>
+          <li aria-label="Link to Drexel CHI's LinkedIn">
             <a href="https://www.linkedin.com/company/duov/posts/?feedView=all" aria-label="Drexel CHI on LinkedIn" target="blank" tabindex="0">
               <img src="images/linkedin_logo.svg" alt="Drexel CHI's LinkedIn" class="logo-light" aria-hidden="true" />
-              <img src="images/linkedin_logo_dark_mode.svg" alt="" class="logo-dark" aria-hidden="true">
+              <img src="images/linkedin_logo_dark_mode.svg" alt="Drexel CHI's LinkedIn" class="logo-dark" aria-hidden="true">
             </a>
           </li>
         </ul>
+        <p id="footer-end" tabindex="-1" class="visually-hidden">
+          End of footer social links
+        </p>
     </footer>
 
     <script src="main.js"></script>
