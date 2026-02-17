@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Drexel CHI User Experience Club</title>
+
+    <!--linking css stylesheet-->
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <!--skip links-->
+    <a href="#main-content" class="header-skip-link" id="top-skip-link">Skip to main content</a>
+
+    <!--header-->
+    <header class="site-header" role="banner">
+      <nav class="nav" aria-label="Primary navigation">
+        <figure class="nav-left" aria-label="Drexel CHI User Experience Logo">
+          <a href="index.html" aria-label="Drexel CHI User Experience Club home">
+            <img src="images/drexelchi_logo.png" alt="Drexel CHI User Experience Logo" class="drexelchi_logo" aria-hidden="true" />
+          </a>
+        </figure>
+      
+        <!--semantic hamburger button-->
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          aria-label="Open menu">
+        </button>
+      
+        <ul id="primary-menu" class="nav-right" aria-label="Main Navigation">
+          <li aria-label="About Us"><a href="#">About Us</a></li>
+          <li aria-label="Contact"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" role="main" tabindex="0">
+        <section class="contact-layout">
+            <article class="contact-info" aria-labelledby="contact-heading" tabindex="0">
+                <h1 id="contact-heading" class="contact-heading" tabindex="0">Contact</h1>
+
+                <h2 id="contact-tagline" class="contact-tagline" tabindex="0">
+                    Anything on your mind? Don't hesitate to reach out!
+                </h2>
+
+                <p id="contact-desc" class="contact-description" tabindex="0">
+                    We'd love to hear from you! Whether you have questions about upcoming
+                    events, want to get involved, or are simply curious about what we do,
+                    the Drexel CHI User Experience Club team is always happy to connect.<br>
+                    Feel free to reach out to us anytime through email or by messaging us on
+                    Instagram. We do our best to respond quickly and make sure you get the
+                    information or support you need. Thanks for your interest—we look
+                    forward to connecting with you!
+                </p>
+
+                <ul class="contact-methods">
+                    <li>
+                      <p class="contact-label" tabindex="0">Email:</p>
+                      <a href="mailto:drexelchi@gmail.com" class="link-style" aria-label="Drexel CHI Email" target="blank" tabindex="0">drexelchi@gmail.com</a>
+                    </li>
+                    <li>
+                      <p class="contact-label" tabindex="0">Instagram:</p>
+                      <a href="https://instagram.com/drexelchi" class="link-style" aria-label="Drexel CHI Instagram" target="blank" tabindex="0">@drexelchi</a>
+                    </li>
+                </ul>
+            </article>
+
+            <form class="contact-form" novalidate aria-labelledby="contact-heading">
+                <!-- FIRST NAME -->
+                <div class="form-field">
+                    <label for="first-name" tabindex="0">
+                            First Name
+                            <span aria-label="required">*</span>
+                    </label>
+                    <input  type="text"
+                            id="first-name"
+                            required
+                            name="first-name"
+                            autocomplete="name"
+                            aria-required="true"
+                            aria-invalid="false"
+                            aria-describedby="first-name-error">
+                    <div id="first-name-error" class="error-message" role="alert" hidden>
+                        Please enter a valid first name.
+                    </div>
+                </div>
+
+                <!-- LAST NAME -->
+                <div class="form-field">
+                    <label for="last-name" tabindex="0">
+                            Last Name
+                            <span aria-label="required">*</span>
+                    </label>
+                    <input  type="text"
+                            id="last-name"
+                            required
+                            name="last-name"
+                            autocomplete="name"
+                            aria-required="true"
+                            aria-invalid="false"
+                            aria-describedby="last-name-error">
+                    <div id="last-name-error" class="error-message" role="alert" hidden>
+                        Please enter a valid last name.
+                    </div>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-field">
+                    <label for="email" tabindex="0">
+                        Email Address
+                        <span aria-label="required">*</span>
+                    </label>
+                    <input  type="email"
+                        id="email"
+                        required
+                        name="email"
+                        autocomplete="email"
+                        aria-required="true"
+                        aria-invalid="false"
+                        aria-describedby="email-error">
+                    <div id="email-error" class="error-message" role="alert" hidden>
+                        Please enter a valid email address.
+                    </div>
+                </div>
+
+                <!-- PHONE -->
+                <div class="form-field">
+                    <label for="phone" tabindex="0">Phone Number</label>
+                    <input  type="tel"
+                            id="phone"
+                            name="phone"
+                            autocomplete="tel"
+                            aria-invalid="false"
+                            aria-describedby="phone-error">
+                    <div id="phone-error" class="error-message" role="alert" hidden>
+                        Please enter a valid phone number.
+                    </div>
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="form-field">
+                    <label for="message" tabindex="0">
+                            Reason for Contact
+                            <span aria-label="required">*</span>
+                    </label>
+                    <textarea
+                            id="message"
+                            required
+                            name="message"
+                            aria-required="true"
+                            aria-invalid="false"
+                            aria-describedby="message-error"></textarea>
+                    <div id="message-error" class="error-message" role="alert" hidden>
+                        Please include a message.
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" tabindex="0">
+                    Submit
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer class="site-footer" role="contentinfo" tabindex="0">
+        <p class="footer-brand" tabindex="0">Drexel CHI</p>
+
+        <a href="#top-skip-link" class="footer-skip-link">Skip past footer icons</a>
+    
+        <ul class="social-links" aria-label="Social media links">
+          <li aria-label="Link to Drexel CHI's Instagram">
+            <a href="https://www.instagram.com/drexelchi/?hl=en" target="blank" aria-label="Drexel CHI on Instagram" tabindex="0">
+              <img src="images/instagram_logo.svg" alt="Drexel CHI's Instagram" class="logo-light" aria-hidden="true">
+              <img src="images/instagram_logo_dark_mode.svg" alt="Drexel CHI's Instagram" class="logo-dark" aria-hidden="true">
+            </a>
+          </li>
+          <li aria-label="Link to Drexel CHI's Discord">
+            <a href="https://discord.gg/mMhGfAK4Mz" aria-label="Drexel CHI on Discord" target="blank" tabindex="0">
+              <img src="images/discord_logo.svg" alt="Drexel CHI's Discord" class="logo-light" aria-hidden="true">
+              <img src="images/discord_logo_dark_mode.svg" alt="Drexel CHI's Discord" class="logo-dark" aria-hidden="true">
+            </a>
+          </li>
+          <li aria-label="Link to Drexel CHI's LinkedIn">
+            <a href="https://www.linkedin.com/company/duov/posts/?feedView=all" aria-label="Drexel CHI on LinkedIn" target="blank" tabindex="0">
+              <img src="images/linkedin_logo.svg" alt="Drexel CHI's LinkedIn" class="logo-light" aria-hidden="true" />
+              <img src="images/linkedin_logo_dark_mode.svg" alt="Drexel CHI's LinkedIn" class="logo-dark" aria-hidden="true">
+            </a>
+          </li>
+        </ul>
+    </footer>
+    
+    <script src="./main.js"></script>
+</body>
+</html>

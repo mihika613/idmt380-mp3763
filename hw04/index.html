@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drexel CHI User Experience Club</title>
+
+    <!--linking css stylesheet-->
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <!--skip links-->
+    <a href="#main-content" class="header-skip-link" id="top-skip-link">Skip to main content</a>
+
+    <!--header-->
+    <header class="site-header" role="banner">
+      <nav class="nav" aria-label="Primary navigation">
+        <figure class="nav-left" aria-label="Drexel CHI User Experience Logo">
+          <a href="index.html" aria-label="Drexel CHI User Experience Club home">
+            <img src="images/drexelchi_logo.png" alt="Drexel CHI User Experience Logo" class="drexelchi_logo" aria-hidden="true" />
+          </a>
+        </figure>
+      
+        <!--semantic hamburger button-->
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          aria-label="Open menu">
+        </button>
+      
+        <ul id="primary-menu" class="nav-right" aria-label="Main Navigation">
+          <li aria-label="About Us"><a href="#">About Us</a></li>
+          <li aria-label="Contact"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--main-->
+    <main id="main-content" role="main" tabindex="0">
+        <section class="hero" aria-labelledby="hero-heading">
+            <article aria-label="hero content" class="hero-content" tabindex="0">
+                <h1 id="hero-heading" tabindex="0">
+                    The Drexel CHI<br />
+                    User Experience Club
+                </h1>
+    
+                <h2 id="hero-tagline" class="hero-tagline" tabindex="0">Where Design Meets Community.</h2>
+    
+                <p id="hero-desc" class="hero-description" tabindex="0">
+                Drexel CHI (Computer Human Interaction) is a student-led community for
+                those curious about user experience, human-computer interaction, and
+                design. Through hands-on workshops, collaboration, and conversation,
+                we help turn creative passion into real-world UX skills and careers.
+                </p>
+    
+                <nav role="navigation" aria-label="Primary actions" class="hero-actions" aria-describedby="hero-desc" tabindex="0">
+                    <a href="#" class="btn btn-primary" tabindex="0">Meet the Club</a>
+                    <a href="#" class="btn btn-secondary" tabindex="0">Get Involved</a>
+                </nav>
+              </article>
+
+    
+            <aside aria-label="Photos from Drexel CHI events" tabindex="0">
+              <figure aria-label="Photos from Drexel CHI events">
+                <img src="images/hero_image.png" alt="Graphic design gallery of images from Drexel CHI UX Club events" class="logo-light" aria-hidden="true"/>
+                <img src="images/hero_image_dark_mode.png" alt="Graphic design gallery of images from Drexel CHI UX Club events" class="logo-dark" aria-hidden="true"/>
+                <figcaption aria-label="Event images from Drexel CHI UX Club" class="visually-hidden">Event images from Drexel CHI UX Club</figcaption>
+              </figure>
+            </aside>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer class="site-footer" role="contentinfo" tabindex="0">
+        <p class="footer-brand" tabindex="0">Drexel CHI</p>
+
+        <a href="#top-skip-link" class="footer-skip-link">Skip past footer icons</a>
+    
+        <ul class="social-links" aria-label="Social media links">
+          <li aria-label="Link to Drexel CHI's Instagram">
+            <a href="https://www.instagram.com/drexelchi/?hl=en" target="blank" aria-label="Drexel CHI on Instagram" tabindex="0">
+              <img src="images/instagram_logo.svg" alt="Drexel CHI's Instagram" class="logo-light" aria-hidden="true">
+              <img src="images/instagram_logo_dark_mode.svg" alt="Drexel CHI's Instagram" class="logo-dark" aria-hidden="true">
+            </a>
+          </li>
+          <li aria-label="Link to Drexel CHI's Discord">
+            <a href="https://discord.gg/mMhGfAK4Mz" aria-label="Drexel CHI on Discord" target="blank" tabindex="0">
+              <img src="images/discord_logo.svg" alt="Drexel CHI's Discord" class="logo-light" aria-hidden="true">
+              <img src="images/discord_logo_dark_mode.svg" alt="Drexel CHI's Discord" class="logo-dark" aria-hidden="true">
+            </a>
+          </li>
+          <li aria-label="Link to Drexel CHI's LinkedIn">
+            <a href="https://www.linkedin.com/company/duov/posts/?feedView=all" aria-label="Drexel CHI on LinkedIn" target="blank" tabindex="0">
+              <img src="images/linkedin_logo.svg" alt="Drexel CHI's LinkedIn" class="logo-light" aria-hidden="true" />
+              <img src="images/linkedin_logo_dark_mode.svg" alt="Drexel CHI's LinkedIn" class="logo-dark" aria-hidden="true">
+            </a>
+          </li>
+        </ul>
+    </footer>
+
+    <script src="./main.js"></script>
+
+</body>
+</html>
