@@ -1,149 +1,182 @@
+// NAV TOGGLE
 const toggle = document.querySelector(".nav-toggle");
 const menu = document.querySelector("#primary-menu");
 
 toggle.addEventListener("click", () => {
-    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+  const isOpen = toggle.getAttribute("aria-expanded") === "true";
 
-    toggle.setAttribute("aria-expanded", !isOpen);
-    toggle.setAttribute(
-      "aria-label",
-      isOpen ? "Open menu" : "Close menu"
-    );
+  toggle.setAttribute("aria-expanded", !isOpen);
+  toggle.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
 
-    menu.classList.toggle("open");
-});
-
-// FIRST NAME
-const firstNameInput = document.getElementById('first-name');
-const firstNameError = document.getElementById('first-name-error');
-
-firstNameInput.addEventListener('blur', function() {
-  const firstName = this.value.trim();
-
-  if (firstName.length < 2) {
-    this.setAttribute('aria-invalid', 'true');
-    firstNameError.hidden = false;
-  } else {
-    this.setAttribute('aria-invalid', 'false');
-    firstNameError.hidden = true;
-  }
+  menu.classList.toggle("open");
 });
 
 
-// LAST NAME
-const lastNameInput = document.getElementById('last-name');
-const lastNameError = document.getElementById('last-name-error');
+// INPUT REFERENCES
+const firstNameInput = document.getElementById("first-name");
+const lastNameInput  = document.getElementById("last-name");
+const emailInput     = document.getElementById("email");
+const phoneInput     = document.getElementById("phone");
+const messageInput   = document.getElementById("message");
 
-lastNameInput.addEventListener('blur', function() {
-  const lastName = this.value.trim();
-
-  if (lastName.length < 2) {
-    this.setAttribute('aria-invalid', 'true');
-    lastNameError.hidden = false;
-  } else {
-    this.setAttribute('aria-invalid', 'false');
-    lastNameError.hidden = true;
-  }
-});
-
-
-// EMAIL
-const emailInput = document.getElementById('email');
-const emailError = document.getElementById('email-error');
-
-emailInput.addEventListener('blur', function() {
-  const email = this.value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!emailPattern.test(email)) {
-    this.setAttribute('aria-invalid', 'true');
-    emailError.hidden = false;
-  } else {
-    this.setAttribute('aria-invalid', 'false');
-    emailError.hidden = true;
-  }
-});
-
-// PHONE
-const phoneInput = document.getElementById('phone');
-const phoneError = document.getElementById('phone-error');
-
-phoneInput.addEventListener('blur', function() {
-  const phone = this.value.trim();
-  const phonePattern = /^[0-9()\-\s]{10,}$/;
-
-  if (!phonePattern.test(phone)) {
-    this.setAttribute('aria-invalid', 'true');
-    phoneError.hidden = false;
-  } else {
-    this.setAttribute('aria-invalid', 'false');
-    phoneError.hidden = true;
-  }
-});
-
-
-// MESSAGE
-const messageInput = document.getElementById('message');
-const messageError = document.getElementById('message-error');
-
-messageInput.addEventListener('blur', function () {
-  const message = this.value.trim();
-
-  if (message.length === 0) {
-    this.setAttribute('aria-invalid', 'true');
-    messageError.hidden = false;
-  } else {
-    this.setAttribute('aria-invalid', 'false');
-    messageError.hidden = true;
-  }
-});
-
+const firstNameError = document.getElementById("first-name-error");
+const lastNameError  = document.getElementById("last-name-error");
+const emailError     = document.getElementById("email-error");
+const phoneError     = document.getElementById("phone-error");
+const messageError   = document.getElementById("message-error");
 
 const form = document.querySelector(".contact-form");
+const formFeedback = document.getElementById("form-feedback");
 
+
+// ---------- REAL-TIME FIELD VALIDATION ----------
+
+// FIRST NAME
+firstNameInput.addEventListener("blur", () => {
+  const isValid = firstNameInput.value.trim().length >= 1;
+  setFieldState(firstNameInput, firstNameError, isValid);
+});
+
+// LAST NAME
+lastNameInput.addEventListener("blur", () => {
+  const isValid = lastNameInput.value.trim().length >= 1;
+  setFieldState(lastNameInput, lastNameError, isValid);
+});
+
+// EMAIL
+emailInput.addEventListener("blur", () => {
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const isValid = pattern.test(emailInput.value.trim());
+  setFieldState(emailInput, emailError, isValid);
+});
+
+// ---------- PHONE AUTO-FORMAT ----------
+phoneInput.addEventListener("input", formatPhoneNumber);
+
+function formatPhoneNumber(e) {
+  let digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+
+  if (digits.length > 6) {
+    digits = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  } else if (digits.length > 3) {
+    digits = `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+  } else if (digits.length > 0) {
+    digits = `(${digits}`;
+  }
+
+  e.target.value = digits;
+}
+
+// PHONE VALIDATION ON BLUR
+phoneInput.addEventListener("blur", () => {
+  const pattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+  const value = phoneInput.value.trim();
+  const isValid = value.length === 0 || pattern.test(value);
+  setFieldState(phoneInput, phoneError, isValid);
+});
+
+// MESSAGE
+messageInput.addEventListener("blur", () => {
+  const isValid = messageInput.value.trim().length > 0;
+  setFieldState(messageInput, messageError, isValid);
+});
+
+
+// FORM SUBMIT VALIDATION 
 form.addEventListener("submit", function (e) {
   let isValid = true;
 
-// FIRST NAME
-if (firstNameInput.value.trim().length < 2) {
-  firstNameInput.setAttribute("aria-invalid", "true");
-  firstNameError.hidden = false;
-  isValid = false;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+
+  if (firstNameInput.value.trim().length < 1) {
+    setFieldState(firstNameInput, firstNameError, false);
+    isValid = false;
+  }
+
+  if (lastNameInput.value.trim().length < 1) {
+    setFieldState(lastNameInput, lastNameError, false);
+    isValid = false;
+  }
+
+  if (!emailPattern.test(emailInput.value.trim())) {
+    setFieldState(emailInput, emailError, false);
+    isValid = false;
+  }
+
+  const phoneVal = phoneInput.value.trim();
+  if (phoneVal.length > 0 && !phonePattern.test(phoneVal)) {
+    setFieldState(phoneInput, phoneError, false);
+    isValid = false;
+  }
+
+  if (messageInput.value.trim().length === 0) {
+    setFieldState(messageInput, messageError, false);
+    isValid = false;
+  }
+
+  formFeedback.hidden = false;
+
+  if (!isValid) {
+    e.preventDefault();
+    formFeedback.textContent = "Please re-enter the correct values into the form.";
+    formFeedback.className = "form-feedback error";
+  } else {
+    e.preventDefault(); // remove when backend is connected
+    formFeedback.textContent = "Your message was sent successfully!";
+    formFeedback.className = "form-feedback success";
+  }
+});
+
+
+// ACCESSIBLE FIELD STATE
+function setFieldState(input, errorEl, isValid) {
+  input.classList.remove("valid", "invalid");
+
+  let icon = input.parentElement.querySelector(".validation-icon");
+  if (!icon) {
+    icon = document.createElement("span");
+    icon.className = "validation-icon";
+    input.parentElement.appendChild(icon);
+  }
+
+  if (isValid) {
+    input.classList.add("valid");
+    input.setAttribute("aria-invalid", "false");
+    errorEl.hidden = true;
+    icon.textContent = "✓";
+    icon.classList.add("valid");
+    icon.classList.remove("invalid");
+  } else {
+    input.classList.add("invalid");
+    input.setAttribute("aria-invalid", "true");
+    errorEl.hidden = false;
+    icon.textContent = "✕";
+    icon.classList.add("invalid");
+    icon.classList.remove("valid");
+  }
 }
 
-// LAST NAME
-if (lastNameInput.value.trim().length < 2) {
-  lastNameInput.setAttribute("aria-invalid", "true");
-  lastNameError.hidden = false;
-  isValid = false;
-}
 
-// EMAIL
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!emailPattern.test(emailInput.value.trim())) {
-  emailInput.setAttribute("aria-invalid", "true");
-  emailError.hidden = false;
-  isValid = false;
-}
+const discardBtn = document.getElementById("discard-btn");
 
-// PHONE (optional but validate if entered)
-const phone = phoneInput.value.trim();
-const phonePattern = /^[0-9()\-\s]{10,}$/;
-if (phone.length > 0 && !phonePattern.test(phone)) {
-  phoneInput.setAttribute("aria-invalid", "true");
-  phoneError.hidden = false;
-  isValid = false;
-}
+discardBtn.addEventListener("click", () => {
+    // Clear all inputs and textarea
+    form.reset();
 
-// MESSAGE
-if (messageInput.value.trim().length === 0) {
-  messageInput.setAttribute("aria-invalid", "true");
-  messageError.hidden = false;
-  isValid = false;
-}
+    // Remove validation states
+    [firstNameInput, lastNameInput, emailInput, phoneInput, messageInput].forEach(input => {
+        input.classList.remove("valid", "invalid");
+        input.setAttribute("aria-invalid", "false");
+        const icon = input.parentElement.querySelector(".validation-icon");
+        if (icon) icon.remove();
+    });
 
-// STOP submit if invalid
-if (!isValid) {
-  e.preventDefault();
-}
+    // Hide error messages
+    [firstNameError, lastNameError, emailError, phoneError, messageError].forEach(err => {
+        err.hidden = true;
+    });
+
+    // Hide form feedback
+    formFeedback.hidden = true;
 });

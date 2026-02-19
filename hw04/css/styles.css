@@ -43,7 +43,12 @@
     --color-text: #000000;
     --color-links: #072F6D;
     --color-cta: #f6c400;
+    --color-error-text: #b00020;
+    --color-valid-text: #2e7d32;
     --color-error: #b00020;
+    --color-valid: #2e7d32;
+    --color-input-bg-error: #fdecea;
+    --color-input-bg-valid: #e8f5e9;
   
     --font-base-size: 1rem; /* 16px */
     --line-height-base: 1.5;
@@ -68,7 +73,12 @@
         --color-text: #ffffff;
         --color-links: #ffffff;
         --color-cta: #f6c400;
-        --color-error: #ffffff;
+        --color-error-text: #fdecea;
+        --color-valid-text: #e8f5e9;
+        --color-error: #b00020;
+        --color-valid: #2e7d32;
+        --color-input-bg-error: #fdecea;
+        --color-input-bg-valid: #e8f5e9;
         --color-text-secondary: #000000;
     }
 
@@ -295,11 +305,17 @@ p {
 
 button.btn.btn-primary {
     border: none;
+    font-family: "Plus Jakarta Sans", Helvetica, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
   
 .btn-secondary {
     border: 2px solid var(--color-text);
     color: var(--color-text)
+}
+
+button.btn.btn-secondary {
+    background-color: var(--color-bg);
+    font-family: "Plus Jakarta Sans", Helvetica, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .hero aside {
@@ -410,6 +426,15 @@ button {
     cursor: pointer;
 }
 
+.form-actions {
+    display: flex;
+    gap: 1rem; /* space between Submit and Discard */
+    margin-top: 1rem;
+}
+
+
+
+
 /* header & footer link hover state microinteraction */
 .site-header a,
 .site-footer a {
@@ -460,6 +485,7 @@ button {
 }
 
 
+
 /* contact layout */
 .contact-layout {
     display: grid;
@@ -469,7 +495,10 @@ button {
     align-items: start;
 }
 
-/* LEFT COLUMN */
+
+
+
+/* left column - contact */
 .contact-info {
     max-width: 36rem;
 }
@@ -502,7 +531,10 @@ h1.contact-heading {
     color: var(--color-links);
 }
 
-/* RIGHT COLUMN FORM */
+
+
+
+/* right column - contact form */
 .contact-form form {
     display: grid;
     gap: 1.25rem;
@@ -528,13 +560,69 @@ textarea {
     resize: vertical;
 }
 
-/* ERROR MESSAGE */
-.error-message {
+
+
+/* valid/invalid field colors */
+input.valid,
+textarea.valid {
+    border: 2px solid var(--color-valid);
+    background-color: var(--color-input-bg-valid);
+}
+
+input.invalid,
+textarea.invalid {
+    border: 2px solid var(--color-error);
+    background-color: var(--color-input-bg-error);
+}
+
+
+
+
+/* icon inside the field */
+.form-field {
+    position: relative;
+}
+
+.validation-icon {
+    position: absolute;
+    right: 0.6rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.validation-icon.valid {
+    color: var(--color-valid);
+    top: 68%; /* nudges the checkmark down a bit */
+}
+
+.validation-icon.invalid {
     color: var(--color-error);
+    top: 50%; /* keep X perfectly centered */
+}
+
+
+
+/* global feedback message */
+.form-feedback {
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.form-feedback.success { color: var(--color-valid-text); }
+.form-feedback.error { color: var(--color-error-text); }
+
+
+
+/* error message */
+.error-message {
+    color: var(--color-error-text);
     font-size: 0.875rem;
 }
 
-/* RESPONSIVE */
+
+
+/* responsive */
 @media (max-width: 60rem) {
 .contact-layout {
     grid-template-columns: 1fr;
