@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Drexel CHI User Experience Club</title>
+
+    <!--linking css stylesheet-->
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <!--skip links-->
+    <a href="#main-content" class="header-skip-link" id="top-skip-link">Skip to main content</a>
+
+    <!--header-->
+    <header class="site-header" role="banner">
+      <nav class="nav" aria-label="Primary navigation">
+        <figure class="nav-left" aria-label="Drexel CHI User Experience Logo">
+          <a href="index.html" aria-label="Drexel CHI User Experience Club home">
+            <img src="images/drexelchi_logo.png" alt="Drexel CHI User Experience Logo" class="drexelchi_logo" aria-hidden="true" />
+          </a>
+        </figure>
+      
+        <!--semantic hamburger button-->
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          aria-label="Open menu">
+        </button>
+      
+        <ul id="primary-menu" class="nav-right" aria-label="Main Navigation">
+          <li aria-label="About Us"><a href="about_us.html">About Us</a></li>
+          <li aria-label="Contact"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" role="main" tabindex="0">
+        <section class="about-layout">
+            <article class="about-info" aria-labelledby="about-heading" tabindex="0">
+                <h1 id="about-heading" class="about-heading" tabindex="0">About Us</h1>
+
+                <h2 id="about-tagline1" class="about-tagline" tabindex="0">
+                    Our Mission
+                </h2>
+
+                <p id="about-desc1" class="about-description" tabindex="0">
+                    Since its founding in 2019, the Drexel CHI UX Club has dedicated itself to showing 
+                    creative students how they can translate their passion into sustainable careers. 
+                    The organization provides a supportive community where members can share ideas, 
+                    collaborate on projects, and develop professionally in the rapidly evolving 
+                    field of user experience.
+
+                    The club aims to bridge the gap between creative passion and professional practice 
+                    by offering specialized workshops that promote good practices in UX while building 
+                    a community of like-minded individuals who support each other's growth.
+                </p>
+
+                <h2 id="about-tagline2" class="about-tagline" tabindex="0">
+                    Inclusive By Design
+                </h2>
+
+                <p id="about-desc2" class="about-description" tabindex="0">
+                    True to the principles of good user experience, the Drexel CHI UX Club embraces 
+                    inclusivity in its membership. The club welcomes students from all majors and academic 
+                    levels, including undergraduate and master's students. This interdisciplinary approach 
+                    creates a rich environment where diverse perspectives contribute to more innovative 
+                    thinking about design and user experience.
+                </p>
+            </article>
+
+            <aside aria-label="Photo of the Drexel CHI eboard" tabindex="0">
+                <figure aria-label="Photo of the Drexel CHI eboard">
+                  <img src="images/drexelchi_eboard.png" alt="Photo of the Drexel CHI eboard" class="logo-light" aria-hidden="true"/>
+                  <img src="images/drexelchi_eboard_dark_mode.png" alt="Photo of the Drexel CHI eboard" class="logo-dark" aria-hidden="true"/>
+                  <figcaption aria-label="The Drexel CHI Eboard" class="visually-hidden">The Drexel CHI Eboard</figcaption>
+                </figure>
+            </aside>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer class="site-footer" role="contentinfo" tabindex="0">
+        <p class="footer-brand" tabindex="0">Drexel CHI</p>
+
+        <a href="#top-skip-link" class="footer-skip-link">Skip past footer icons</a>
+    
+        <ul class="social-links" aria-label="Social media links">
+          <li aria-label="Link to Drexel CHI's Instagram">
+            <a href="https://www.instagram.com/drexelchi/?hl=en" target="blank" aria-label="Drexel CHI on Instagram" tabindex="0">
+              <img src="images/instagram_logo.svg" alt="Drexel CHI's Instagram" class="logo-light" aria-hidden="true">
+              <img src="images/instagram_logo_dark_mode.svg" alt="Drexel CHI's Instagram" class="logo-dark" aria-hidden="true">
+            </a>
+          </li>
+          <li aria-label="Link to Drexel CHI's Discord">
+            <a href="https://discord.gg/mMhGfAK4Mz" aria-label="Drexel CHI on Discord" target="blank" tabindex="0">
+              <img src="images/discord_logo.svg" alt="Drexel CHI's Discord" class="logo-light" aria-hidden="true">
+              <img src="images/discord_logo_dark_mode.svg" alt="Drexel CHI's Discord" class="logo-dark" aria-hidden="true">
+            </a>
+          </li>
+          <li aria-label="Link to Drexel CHI's LinkedIn">
+            <a href="https://www.linkedin.com/company/duov/posts/?feedView=all" aria-label="Drexel CHI on LinkedIn" target="blank" tabindex="0">
+              <img src="images/linkedin_logo.svg" alt="Drexel CHI's LinkedIn" class="logo-light" aria-hidden="true" />
+              <img src="images/linkedin_logo_dark_mode.svg" alt="Drexel CHI's LinkedIn" class="logo-dark" aria-hidden="true">
+            </a>
+          </li>
+        </ul>
+    </footer>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
