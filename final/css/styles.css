@@ -39,16 +39,18 @@
 
 /* colors & variables */
 :root {
-    --color-bg: #ffffff;
+    --color-bg: #FFFFFF;
     --color-text: #000000;
-    --color-links: #072F6D;
-    --color-cta: #f6c400;
-    --color-error-text: #b00020;
-    --color-valid-text: #2e7d32;
-    --color-error: #b00020;
-    --color-valid: #2e7d32;
-    --color-input-bg-error: #fdecea;
-    --color-input-bg-valid: #e8f5e9;
+    --color-links: #062F6D;
+    --color-cta: #F6C401;
+    --color-primary-cta-border: #000000;
+    --color-error-text: #A3001E;
+    --color-valid-text: #0C5B3E;
+    --color-error: #A3001E;
+    --color-valid: #0C5B3E;
+    --color-input-bg-error: #FDECEB;
+    --color-input-bg-valid: #E9F5E9;
+    --color-input-border: #949494;
   
     --font-base-size: 1rem; /* 16px */
     --line-height-base: 1.5;
@@ -69,17 +71,19 @@
 /* dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-bg: #072F6D;
-        --color-text: #ffffff;
-        --color-links: #ffffff;
-        --color-cta: #f6c400;
-        --color-error-text: #fdecea;
-        --color-valid-text: #e8f5e9;
-        --color-error: #b00020;
-        --color-valid: #2e7d32;
-        --color-input-bg-error: #fdecea;
-        --color-input-bg-valid: #e8f5e9;
+        --color-bg: #062F6D;
+        --color-text: #FFFFFF;
+        --color-links: #FFFFFF;
+        --color-cta: #F6C401;
+        --color-primary-cta-border: #F6C401;
+        --color-error-text: #FDECEB;
+        --color-valid-text: #E9F5E9;
+        --color-error: #A3001E;
+        --color-valid: #0C5B3E;
+        --color-input-bg-error: #FDECEB;
+        --color-input-bg-valid: #E9F5E9;
         --color-text-secondary: #000000;
+        --color-input-border: #949494;
     }
 
     body {
@@ -300,11 +304,12 @@ p {
   
 .btn-primary {
     background-color: var(--color-cta);
+    border: 2px solid var(--color-primary-cta-border);
     color: var(--color-text)
 }
 
 button.btn.btn-primary {
-    border: none;
+    border: 2px solid var(--color-primary-cta-border);
     font-family: "Plus Jakarta Sans", Helvetica, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
   
@@ -550,7 +555,7 @@ input,
 textarea {
     padding: 0.6rem 0.75rem;
     border-radius: var(--radius-small);
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-input-border);
     font-family: inherit;
     font-size: 1rem;
 }
