@@ -115,16 +115,17 @@ form.addEventListener("submit", function (e) {
     isValid = false;
   }
 
-  formFeedback.hidden = false;
 
   if (!isValid) {
     e.preventDefault();
     formFeedback.textContent = "Please re-enter the correct values into the form.";
     formFeedback.className = "form-feedback error";
+    formFeedback.hidden = false;
   } else {
     e.preventDefault(); // remove when backend is connected
     formFeedback.textContent = "Your message was sent successfully!";
     formFeedback.className = "form-feedback success";
+    formFeedback.hidden = false;
   }
 });
 
