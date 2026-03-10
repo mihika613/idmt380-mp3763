@@ -139,9 +139,14 @@ h2 {
     line-height: 1.5;
 }
 
+h3 {
+    font-size: clamp(0.875rem, 0.75rem + 0.6vw, 1rem); /* 14px → 16px */
+    line-height: 1.5;
+}
+
 p {
     font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem); /* 14px → 16px */
-    line-height: 1.6; /
+    line-height: 1.6;
 }
 
 /* skip link & hidden elements */
@@ -688,20 +693,27 @@ h1.about-heading {
   }
   
   .hero-image {
-    height: 60vh;
-    min-height: 320px;
-    background-color: var(--light-gray);
+    width: 100%;
+    margin: 0 auto 3rem auto;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 3rem;
   }
   
-  .hero-image p {
-    font-family: var(--font-sans-serif);
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: var(--gray);
+  .hero-image img {
+    width: 100%;
+    max-width: 1200px; /* keeps it aligned with your content width */
+    height: auto;
+  }
+
+   .case-image {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical if needed */
+    }
+
+  .case-image img {
+    max-height: 500px;
+    width: auto;
   }
   
   .case-title {
@@ -728,13 +740,9 @@ h1.about-heading {
     line-height: 1.6;
     margin-bottom: 1rem;
   }
-  
-  .case-image {
-    display: block;          
-    max-width: 80ch;         
-    width: 100%;             
-    height: auto;
-    margin: 2rem auto;       
+
+  .case-subsection {
+    padding-bottom: 1rem;
   }
   
   /* RESPONSIVE */

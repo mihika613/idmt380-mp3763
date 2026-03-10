@@ -387,7 +387,6 @@ button.btn.btn-secondary {
     }
 
     .hero-actions {
-        flex-direction: column;
         align-items: flex-start;
     }
 }

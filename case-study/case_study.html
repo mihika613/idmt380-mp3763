@@ -9,60 +9,283 @@
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-    <div class="hero-image">
-        <p>hero image</p>
-    </div>
+    <!--hero image-->
+    <figure class="hero-image" aria-label="Mockup of Screens from Drexel CHI UX Club Website">
+        <img src="images/idmt380casestudymockup_lightmode.png" alt="Mockup of Screens from Drexel CHI UX Club Website" class="logo-light" aria-hidden="true"/>
+        <img src="images/idmt380casestudymockup_darkmode.png" alt="Mockup of Screens from Drexel CHI UX Club Website" class="logo-dark" aria-hidden="true"/>
+        <figcaption aria-label="Mockup of Screens from Drexel CHI UX Club Website" class="visually-hidden">Mockup of Screens from Drexel CHI UX Club Website</figcaption>
+    </figure>
+
+    <main class="case-study-container" tabindex="0">
+        <h1 class="case-title" tabindex="0">Drexel CHI UX Club Website - Scripting for Accessibility</h1>
+        <p class="case-study-details" tabindex="0">Mihika Patel  |  UX Designer & Frontend Developer  |  3 Months  |  Figma, VSCode, HTML, CSS</p>
+
+        <!--overview-->
+        <section class="case-section">
+            <h2 class="case-subheading" tabindex="0">Overview</h2>
+            <p class="case-text" tabindex="0">
+                The Drexel CHI User Experience Club website was designed and developed to provide an accessible, inclusive, and modern digital presence for my on-campus student organization. The project focused on ensuring that all users - including those using assistive technologies - could easily navigate and interact with the site.
+            </p>
+
+            <p class="case-text" tabindex="0">
+                The primary challenge was translating accessibility best practices into a fully functional website while maintaining a strong visual identity for the club. To address this, I created an accessible color palette, designed wireframes in Figma, and developed the final site using semantic HTML and accessible interaction patterns. Key accessibility features include proper semantic structure, ARIA labels, skip navigation links, dark mode support, and compatibility with screen readers such as VoiceOver.
+            </p>
+
+            <p class="case-text" tabindex="0">
+                The final result is a responsive and accessible website that clearly communicates the club's mission, simplifies navigation for prospective members, and demonstrates how thoughtful UX design can support inclusivity on the web.
+            </p>
+        </section>
+
+        <hr>
+
+        <!--context & challenge-->
+        <section class="case-section" tabindex="0">
+            <h2 class="case-subheading" tabindex="0">Context and Challenge</h2>
+            <!--background-->
+            <section class="case-subsection" tabindex="0">
+                <h3 class="case-subheading-subsection" tabindex="0">Background</h3>
+                <p class="case-text" tabindex="0">
+                    The Drexel CHI (Computer Human Interaction) User Experience Club is a student-led organization that brings together students interested in UX design, research, and human-computer interaction. The club hosts workshops, networking opportunities, and community events that help students gain real-world UX experience.
+                </p>
+
+                <figure class="case-image" aria-label="Photos from Drexel CHI events">
+                    <img src="images/hero_image.png" alt="Graphic design gallery of images from Drexel CHI UX Club events" class="logo-light" aria-hidden="true"/>
+                    <img src="images/hero_image_dark_mode.png" alt="Graphic design gallery of images from Drexel CHI UX Club events" class="logo-dark" aria-hidden="true"/>
+                    <figcaption aria-label="Event images from Drexel CHI UX Club" class="visually-hidden">Event images from Drexel CHI UX Club</figcaption>
+                </figure>
+
+                <p class="case-text" tabindex="0">
+                    Despite the club's active presence, it lacked a dedicated, accessible website where students could easily learn about events, get involved, and contact the organization.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    This project was completed as part of an accessibility-focused web design course, with the goal of applying accessibility standards directly within the design and development process.
+                </p>
+            </section>
+    
+            <!--problem-->
+            <section class="case-subsection" tabindex="0">
+                <h3 class="case-subheading-subsection" tabindex="0">Problem</h3>
+                <p class="case-text" tabindex="0">
+                    Many student organization websites unintentionally exclude users by overlooking accessibility best practices. Poor color contrast, missing semantic structure, and lack of screen reader support can make sites difficult, or impossible, to use for individuals relying on assistive technologies.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    The challenge for this project was to design and develop a website that:
+                </p>
+
+                <ul class="case-text" aria-label="Challenges" tabindex="0">
+                    <li aria-label="Meets accessibility best practices" tabindex="0">Meets accessibility best practices</li>
+                    <li aria-label="Supports screen readers and keyboard navigation" tabindex="0">Supports screen readers and keyboard navigation</li>
+                    <li aria-label="Maintains a cohesive and engaging visual identity for the club" tabindex="0">Maintains a cohesive and engaging visual identity for the club</li>
+                </ul>
+            </section>
+
+            <!--goals & objectives-->
+            <section class="case-subsection" tabindex="0">
+                <h3 class="case-subheading-subsection" tabindex="0">Goals and Objectives</h3>
+                <p class="case-text" tabindex="0">
+                    This project aimed to:
+                </p>
+
+                <ul class="case-text" aria-label="Goals" tabindex="0">
+                    <li aria-label="Design a fully accessible website for the Drexel CHI User Experience Club" tabindex="0">Design a fully accessible website for the Drexel CHI User Experience Club</li>
+                    <li aria-label="Ensure WCAG-conscious color contrast and visual accessibility" tabindex="0">Ensure WCAG-conscious color contrast and visual accessibility</li>
+                    <li aria-label="Implement semantic HTML structure for improved screen reader support" tabindex="0">Implement semantic HTML structure for improved screen reader support</li>
+                    <li aria-label="Support keyboard navigation and VoiceOver compatibility" tabindex="0">Support keyboard navigation and VoiceOver compatibility</li>
+                    <li aria-label="Provide a clear and welcoming digital entry point for prospective members" tabindex="0">Provide a clear and welcoming digital entry point for prospective members</li>
+                </ul>
+
+                <figure class="case-image" aria-label="WCAG3 web accessibility graphic">
+                    <img src="images/wcag.png" alt="WCAG3 web accessibility graphic" class="logo-light" aria-hidden="true"/>
+                    <img src="images/wcag.png" alt="WCAG3 web accessibility graphic" class="logo-dark" aria-hidden="true"/>
+                    <figcaption aria-label="WCAG3 web accessibility graphic" class="visually-hidden">WCAG3 web accessibility graphic</figcaption>
+                </figure>
+
+                <p class="case-text" tabindex="0">
+                    This was a solo project, where I was responsible for the full design and development process, including UX design, prototyping, and front-end implementation.
+                </p>
+            </section>
+        </section>
+
+        <hr>
+
+        <!--process & insight-->
+        <section class="case-section" tabindex="0">
+            <h2 class="case-subheading" tabindex="0">Process and Insight</h2>
+            <section class="case-subsection" tabindex="0">
+                <p class="case-text" tabindex="0">
+                    The project followed a structured UX process that moved from accessibility research and planning to design and development.
+                </p>
+            </section>
+
+            <!--robust color system-->
+            <section class="case-subsection" tabindex="0">
+                <h3 class="case-subheading-subsection" tabindex="0">Robust Color System</h3>
+                <p class="case-text" tabindex="0">
+                    The design process began by establishing a robust color palette that maintained the strong visual branding of the club while meeting accessibility requirements.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    Using contrast checking tools, I tested combinations of colors to ensure they met WCAG contrast standards for readability across different interface components.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    This step ensured that text, buttons, and UI elements remained readable for users with visual impairments.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    Robust color palette:
+                </p>
+                <figure class="case-image" aria-label="Robust color palette">
+                    <img src="images/robust_color_palette.png" alt="Robust color palette" class="logo-light" aria-hidden="true"/>
+                    <img src="images/robust_color_palette.png" alt="Robust color palette" class="logo-dark" aria-hidden="true"/>
+                    <figcaption aria-label="Robust color palette" class="visually-hidden">Robust color palette</figcaption>
+                </figure>
+                
+                <p class="case-text" tabindex="0">
+                    APCA color palette:
+                </p>
+                <figure class="case-image" aria-label="APCA color palette">
+                    <img src="images/apca_color_palette.png" alt="APCA color palette" class="logo-light" aria-hidden="true"/>
+                    <img src="images/apca_color_palette.png" alt="APCA color palette" class="logo-dark" aria-hidden="true"/>
+                    <figcaption aria-label="APCA color palette" class="visually-hidden">APCA color palette</figcaption>
+                </figure>
+            </section>
+
+            <!--wireframes-->
+            <section class="case-subsection" tabindex="0">
+                <h3 class="case-subheading-subsection" tabindex="0">Wireframes</h3>
+                <p class="case-text" tabindex="0">
+                    Before development, I created wireframes in Figma to plan the site structure and layout.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    Wireframes:
+                </p>
+                <figure class="case-image" aria-label="Wireframes">
+                    <img src="images/drexelchi_wireframes.png" alt="Wireframes" class="logo-light" aria-hidden="true"/>
+                    <img src="images/drexelchi_wireframes.png" alt="Wireframes" class="logo-dark" aria-hidden="true"/>
+                    <figcaption aria-label="Wireframes" class="visually-hidden">Wireframes</figcaption>
+                </figure>
+
+                <p class="case-text" tabindex="0">
+                    The wireframes focused on:
+                </p>
+
+                <ul class="case-text" aria-label="Wireframe focuses" tabindex="0">
+                    <li aria-label="Clear content hierarchy" tabindex="0">Clear content hierarchy</li>
+                    <li aria-label="Simple and predictable navigation" tabindex="0">Simple and predictable navigation</li>
+                    <li aria-label="Logical grouping of information" tabindex="0">Logical grouping of information</li>
+                </ul>
+
+                <p class="case-text" tabindex="0">
+                    This allowed the layout to prioritize usability and accessibility before visual styling was introduced.
+                </p>
+            </section>
+
+            <!--development & semantic structure-->
+            <section class="case-subsection" tabindex="0">
+                <h3 class="case-subheading-subsection" tabindex="0">Development and Semantic Structure</h3>
+                <p class="case-text" tabindex="0">
+                    After finalizing the wireframes, I translated the designs into code.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    The site was built using semantic HTML and structured CSS, with a strong emphasis on accessibility and maintainability.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    Key implementation decisions included:
+                </p>
+
+                <ul class="case-text" aria-label="Key decisions for HTML / CSS" tabindex="0">
+                    <li aria-label="Using proper semantic tags such as header, nav, main, section, and footer instead of divs and spans" tabindex="0">Using proper semantic tags such as header, nav, main, section, and footer instead of divs and spans</li>
+                    <li aria-label="Ensuring orderly and logical heading structure (h1-h3)" tabindex="0">Ensuring orderly and logical heading structure (h1-h3)</li>
+                    <li aria-label="Creating consistent layout components across pages" tabindex="0">Creating consistent layout components across pages</li>
+                </ul>
+
+                <p class="case-text" tabindex="0">
+                    These decisions improve both accessibility and long-term maintainability.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    Semantic HTML:
+                </p>
+                <figure class="case-image" aria-label="Semantic HTML">
+                    <img src="images/semantic_html.png" alt="Semantic HTML" class="logo-light" aria-hidden="true"/>
+                    <img src="images/semantic_html.png" alt="Semantic HTML" class="logo-dark" aria-hidden="true"/>
+                    <figcaption aria-label="Semantic HTML" class="visually-hidden">Semantic HTML</figcaption>
+                </figure>
+            </section>
+
+            <!--accessibility features-->
+            <section class="case-subsection" tabindex="0">
+                <h3 class="case-subheading-subsection" tabindex="0">Accessibility Features</h3>
+                <p class="case-text" tabindex="0">
+                    Accessibility was integrated throughout development rather than added as an afterthought.
+                </p>
+
+                <p class="case-text" tabindex="0">
+                    Key accessibility features included:
+                </p>
+
+                <ul class="case-text" aria-label="Key accessibility features" tabindex="0">
+                    <li aria-label="Skip Navigation Links - Allows keyboard users and screen readers to quickly jump to the main content." tabindex="0">Skip Navigation Links - Allows keyboard users and screen readers to quickly jump to the main content.</li>
+                    <li aria-label="ARIA Labels - Provides additional context for screen readers where necessary." tabindex="0">ARIA Labels - Provides additional context for screen readers where necessary.</li>
+                    <li aria-label="Dark Mode - Supports alternative viewing preferences and reduces visual strain." tabindex="0">Dark Mode - Supports alternative viewing preferences and reduces visual strain.</li>
+                    <li aria-label="Keyboard Navigation - Ensures interactive elements can be navigated without a mouse." tabindex="0">Keyboard Navigation - Ensures interactive elements can be navigated without a mouse.</li>
+                    <li aria-label="Screen Reader Compatibility - The site was tested using VoiceOver to confirm that content structure and form interactions are properly announced." tabindex="0">Screen Reader Compatibility - The site was tested using VoiceOver to confirm that content structure and form interactions are properly announced.</li>
+                    <li aria-label="Accessible Form Validation - Form inputs clearly communicate errors and success states." tabindex="0">Accessible Form Validation - Form inputs clearly communicate errors and success states.</li>
+                </ul>
+            </section>
+        </section>
+
+        <hr>
+
+        <section class="case-section">
+            <h2 class="case-subheading">Solution</h2>
+            <p class="case-text" tabindex="0">
+                The final result is a responsive and accessible website that provides a welcoming digital home for the Drexel CHI User Experience Club.
+            </p>
+
+            <p class="case-text" tabindex="0">
+                The homepage introduces the organization with a clear value proposition and directs users toward key actions such as learning about the club or getting in touch.
+            </p>
+
+            <p class="case-text" tabindex="0">
+                The design emphasizes:
+            </p>
+
+            <ul class="case-text" aria-label="Design emphasizes:" tabindex="0">
+                <li aria-label="Web Accessibility -  Accessibility was considered throughout the site, ensuring users with a range of abilities can navigate and interact comfortably." tabindex="0">Web Accessibility -  Accessibility was considered throughout the site, ensuring users with a range of abilities can navigate and interact comfortably.</li>
+                <li aria-label="Clear Navigation Structure - Users can quickly understand where to go and how to access information about the club." tabindex="0">Clear Navigation Structure - Users can quickly understand where to go and how to access information about the club.</li>
+                <li aria-label="Responsive Layout - The interface adapts to different screen sizes while maintaining usability." tabindex="0">Responsive Layout - The interface adapts to different screen sizes while maintaining usability.</li>
+            </ul>
+
+            <p class="case-text" tabindex="0">
+                Overall, the design balances visual clarity, usability, and accessibility, ensuring that all users can interact with the site comfortably.
+            </p>
+        </section>
+
+        <hr>
         
-    <div class="case-study-container">
-        <h1 class="case-title">Drexel CHI UX Club - Scripting for Accessibility</h1>
-        <p class="case-study-details">NAME | ROLE | TIME | TOOLS</p>
-
         <section class="case-section">
-            <h2 class="case-subheading">overview</h2>
-            <p class="case-text">This the executive summary of your case study. 
-                It allows your prospects to quickly understand the highlights of 
-                your past work without reading the entire thing. This section should 
-                include the core takeaways from all other sections including the main 
-                problem, an overview of the solution, and key results. This is typically 
-                written last, so that you can scan for the main points from each section 
-                below and summarize them into a one or two paragraph synopsis.</p>
-        </section>
+            <h2 class="case-subheading">Results</h2>
+            <p class="case-text">
+                The project was a success; it demonstrated how accessibility can be integrated into the design and development process from the beginning.
+            </p>
 
+            <p class="case-text">
+                Key outcomes include:
+            </p>
 
-        <section class="case-section">
-            <h2 class="case-subheading">context and challenge</h2>
-            <p class="case-text">This section is designed to provide your prospective client with a detailed description of the context that led to the creation of the project, and can be distilled into three main elements:
-                Background / Description / Timeline / Budget / Purpose
-                The Problem: Define why this project exists and what problem it seeks to solve.
-                Goals & Objectives: What are the metrics that will define if this project is successful. What are the tangible goals.
-                Give a quick overview of the project. What were the goals for the project. Keep the focus on problem-solving, not just asset delivery. Define if it was a solo or team based project. If team based, what your role was on the project. </p>
+            <ul class="case-text" aria-label="Outcomes" tabindex="0">
+                <li aria-label="A fully functional and accessible website for the Drexel CHI UX Club" tabindex="0">A fully functional and accessible website for the Drexel CHI UX Club</li>
+                <li aria-label="Implementation of accessibility features such as semantic HTML, ARIA labels, skip links, and screen reader compatibility." tabindex="0">Implementation of accessibility features such as semantic HTML, ARIA labels, skip links, and screen reader compatibility.</li>
+                <li aria-label=">A responsive and visually cohesive interface that aligns with the club's identity." tabindex="0">A responsive and visually cohesive interface that aligns with the club's identity.</li>
+            </ul>
         </section>
-
-        <section class="case-section">
-            <h2 class="case-subheading">process and insight</h2>
-            <p class="case-text">This section should elaborate on your design process. How did you go about developing the final solution. What were the steps that will help the reader to visualize the work and, more importantly, to see that it was created by human beings. We want see how the final came into being, not just what the piece looks like at the end. These could include (but not limited to) research:
-
-                Target Audience / User Personas
-                User Journeys
-                Design Sketches
-                Wireframes
-                Style Guide
-                Prototypes
-                Code/Dev
-                UX Testing Notes
-                Final Project
-                If this was a team based project, make sure to define your specific contributions to the project. When was there team consensus, and what were you specifically responsible for. Be sure to include images / video for each stage of the process as appropriate.</p>
-        </section>
-
-        <section class="case-section">
-            <h2 class="case-subheading">solution</h2>
-            <p class="case-text">This is where you get to show off your final design with detailed images and videos, and a link to the live project if available. Describe your design work. Take the time to explain in detail your site's defining features like its UX, navigation structure, content strategy, or unique mobile attributes. If you put the effort into crafting descriptions that complement your visual assets, your readers will feel much more confident in your decisions as a designer/developer.</p>
-        </section>
-        
-        <section class="case-section">
-            <h2 class="case-subheading">results</h2>
-            <p class="case-text">A quick wrap up. Was the project a success and why. Do you have qualitative and quantitative success metrics from your project? These should directly address the objectives you established in The Context and Challenge section. If this is client work, include a client testimonial. This also is an opportunity to define the lessons learned and what you would change about your process / approach in the future.</p>
-        </section>
-    </div>
+    </main>
 </body>
 </html>
